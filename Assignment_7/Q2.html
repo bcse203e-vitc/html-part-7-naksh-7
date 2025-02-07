@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <script>
+        function req(){
+            let c=0;
+            let str = "";
+            while(c<50){
+                c++;
+                if(c%3==0 && c%5==0){
+                    str+="FizzBuzz<br>";
+                }
+                else if(c%3==0){
+                    str+="Fizz<br>";
+                }
+                else if(c%5==0){
+                    str+="Buzz<br>";
+                }
+                else{
+                    str+=c+"<br>";
+                }
+                document.getElementById("ans").innerHTML = str;
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <h1>Click to print from 1 to 50</h1>
+    <button id="inp" onclick="req()">Click to start</button>
+    <p id="ans"></p>
+</body>
+</html>

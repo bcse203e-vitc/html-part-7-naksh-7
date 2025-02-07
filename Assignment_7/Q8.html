@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7</title>
+    <script>
+        function req(){
+            let str = prompt("Enter the values separated by comma", "1,2,3,4,1,2");
+            let k = prompt("Enter the index value 1.Ascending 2.Descending");
+            let arr = str.split(",");
+            if(k==1){
+                for(let i=0;i<arr.length;i++){
+                    for(let j=0;j<arr.length;j++){
+                        if(arr[i]<arr[j]){
+                            let temp = arr[i];
+                            arr[i] = arr[j];
+                            arr[j] = temp;
+                        }
+                    }
+                }
+                str = "";
+                for(let i=0;i<arr.length;i++){
+                    str+=arr[i];
+                    str += " ";
+                }
+                document.getElementById("ans").innerHTML = "Ascending Order: "+ str;
+            }
+            else{
+                for(let i=0;i<arr.length;i++){
+                    for(let j=0;j<arr.length;j++){
+                        if(arr[i]>arr[j]){
+                            let temp = arr[i];
+                            arr[i] = arr[j];
+                            arr[j] = temp;
+                        }
+                    }
+                }
+                str = "";
+                for(let i=0;i<arr.length;i++){
+                    str+=arr[i];
+                    str += " ";
+                }
+                document.getElementById("ans").innerHTML = "Descending Order: "+ str;
+            }
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Sorting (Ascending or Descending)</h1>
+    <button id="inp" onclick="req()">Click to input</button>
+    <p id="ans"></p>
+</body>
+</html>

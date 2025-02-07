@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6</title>
+    <script>
+        function req(){
+            let str = prompt("Enter the values separated by comma", "1,2,3,4,1,2");
+            let arr = str.split(",");
+            var max = 1000;
+            var s1 = ""
+            for(let i=0;i<arr.length;i++){
+                arr[i] = parseInt(arr[i]);
+            }
+            let a2 = [],k=0;
+            for(let i=0;i<arr.length;i++){
+                for(let j=i+1;j<arr.length;j++){
+                    if(arr[i]==arr[j]){
+                        s1+= arr[i];
+                        s1+= " ";
+                    }
+                }
+            }
+            document.getElementById("ans").innerHTML = "Duplicate values: "+s1;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Duplicate values</h1>
+    <button id="inp" onclick="req()">Click to input</button>
+    <p id="ans"></p>
+</body>
+</html>

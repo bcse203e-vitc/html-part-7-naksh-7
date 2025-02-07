@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7</title>
+    <script>
+        function req(){
+            let str = prompt("Enter the values separated by comma", "1,2,3,4,1,2");
+            let arr = str.split(",");
+            for(let i=0;i<arr.length;i++){
+                arr[i] = parseInt(arr[i]);
+            }
+            arr.sort().reverse();
+            document.getElementById("ans").innerHTML = "Second Largest number: "+ arr[1]+"<br>Third Largest number: "+arr[2];
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Finding Second Largest Number</h1>
+    <button id="inp" onclick="req()">Click to input</button>
+    <p id="ans"></p>
+</body>
+</html>

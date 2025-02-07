@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+    <script>
+        function req(){
+            var num = Math.floor(Math.random()*100) + 1;
+            var guess = prompt("Guess the number between 1 and 100");
+            let count=0;
+            while(guess!=num){
+                if(count==5){
+                    document.getElementById("ans").innerHTML = "You have exceeded the number of attempts!";
+                    break;
+                }
+                if(guess>num){
+                    guess = prompt("Too high! Guess again");
+                }
+                else{
+                    guess = prompt("Too low! Guess again");
+                }
+                count++;
+            }
+            document.getElementById("ans").innerHTML = "Congratulations! You guessed the number!";
+        };
+    </script>
+</head>
 
+<body>
+    <p>Guess the number</p>
+    <button id="inp" onclick="req()">Click to start</button>
+    <p id="ans"></p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+    <script>
+        function req(){
+            let str = prompt("Enter the string", "hello world");
+            var count =0;
+            for(let s in str){
+                count++;
+            }
+            str = str.split(" ");
+            let a = str.length;
+            let s1 = "No. of characters: "+count+"<br>No. of words: "+ a;
+            document.getElementById("ans").innerHTML = s1;
+        }
+    </script>
+</head>
+<body>
+    <h1>Character counter</h1>
+    <button id="inp" onclick="req()">Click to input</button>
+    <p id="ans"></p>
+</body>
+</html>

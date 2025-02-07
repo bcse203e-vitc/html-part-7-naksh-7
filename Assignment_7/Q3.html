@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+    <script>
+        function req(){
+            let str = prompt("Enter the string", "1+2");
+            let num1 = parseInt(str[0]);
+            let num2 = parseInt(str[2]);
+            let op = str[1];
+            let a = 0;
+            if(op=='+'){
+                a = num1+num2;  
+            }
+            else if(op=='-'){
+                a = num1-num2;
+            }
+            else if(op=='*'){
+                a = num1*num2;
+            }
+            else if(op=='/'){
+                a = num1/num2;
+            }
+            else if(op=='%'){
+                a = num1%num2;
+            }
+            else if(op=='^'){
+                a = Math.pow(num1, num2);
+            }
+            document.getElementById("ans").innerHTML = a;   
+        }
+    </script>
+</head>
+<body>
+    <button id="inp" onclick="req()">Click to perform simple calculation</button>
+    <p id="ans"></p>
+</body>
+</html>

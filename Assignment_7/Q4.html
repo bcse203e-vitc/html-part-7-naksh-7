@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+    <script>
+        function req(){
+            let str = prompt("Enter the string", "Malayalam is iMalayalam");
+            str = str.toLocaleLowerCase();
+            str = str.split(" ").join("");
+            let rev = str.split("").reverse().join("");
+            if(str==rev){
+                document.getElementById("ans").innerHTML = "The string is a palindrome!";
+            }
+            else{
+                document.getElementById("ans").innerHTML = "The string is not a palindrome!";
+            }   
+        }
+    </script>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+    <button id="inp" onclick="req()">Click to check</button>
+    <p id="ans"></p>
+</body>
+</html>
